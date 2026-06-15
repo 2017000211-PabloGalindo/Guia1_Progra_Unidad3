@@ -1,0 +1,30 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("LECC 16 - ACT2 - INCISO 1");
+        Console.WriteLine("Pablo Galindo");
+
+        //Arreglo - inicializa
+        int[] edadPersona = new int[7];
+        int cantidadPersonasMayores = 0;
+
+        for (int i = 0; i < edadPersona.Length; i++)
+        {
+            Console.Write("Ingrese la edad: " +(i+1) + ": ");
+            edadPersona[i]=Convert.ToInt32(Console.ReadLine());
+            if (edadPersona[i]>=18)
+                cantidadPersonasMayores++;
+        }
+
+        //mOSTRAR los datos del arreglo
+        Console.Clear();
+        Console.Write("Las edades ingresadas son: ");
+        for (int i = 0; i < edadPersona.Length; i++)
+        {
+            Console.Write(edadPersona[i]+" - ");
+
+        }
+        Console.WriteLine("La cantidad de personas Mayores de edad son: "+cantidadPersonasMayores);
+    }
+}
